@@ -65,6 +65,17 @@
     color:#672f54 ;
 }
 
+.navbar .btn-outline-success {
+    color: #672f54; /* Text color */
+    border-color: #672f54; /* Border color */
+}
+
+.navbar .btn-outline-success:hover {
+    color: #fff; /* Text color on hover */
+    background-color:#672f54; /* Background color on hover */
+    border-color:#672f54; /* Border color on hover */
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -126,4 +137,66 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #5a2749;
+}
+
+/* Service Section */
+#services {
+    padding: 50px 0; /* Adjust padding as needed */
+    background-color: #f8f9fa; /* Background color for the service section */
+}
+
+#services h3 {
+    text-align: center;
+    color: #672f54;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color:#613452;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(184, 103, 255, 0.661);
+    text-align: center;
+}
+.service-card h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer; /* Add cursor pointer for better indication */
+}
+
+.service-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the bar cover the entire width of the heading */
+    height: 2px; /* Set the height of the bar */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.service-card h4:hover::after {
+    background-color: #ffffff; /* Change the background color on hover */
+}
+
+
+.service-card p {
+    color: #ffffff;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

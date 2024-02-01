@@ -1,112 +1,327 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event Planner</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Event Planner</title>
-  <link rel="stylesheet" href="./index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
+  <body>
+    <!--home page-->
+    <ul class="navbar" id="navbar">
+      <img src="logo.jpg" style="width: 110px" alt="Logo" />
+      <span><a class="navbar-brand" href="#">EVENT PLANNER</a></span>
 
-<body>
-  <!--home page-->
-  <ul class="navbar" id="navbar">
-      <img src="logo.jpg"style="width: 110px;" alt="Logo">
-      <span> <a class="navbar-brand "  class="logo" href="#">EVENT PLANNER</a></span>
-      
       <ul class="navbar">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#services" class="nav-link" id="servicesLink">Services</a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="nav-link"
+            id="contactLink"
+            data-bs-toggle="modal"
+            data-bs-target="#contactModal"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </ul>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Discounts !!</strong> For further details visit booking section.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    
-  </nav>
-</ul>
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Discounts !!</strong> For further details visit booking section.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+    <!--Hero section page-->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="birthday.jpg" class="d-block w-100" alt="Birthday" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Birthday Party</h5>
+            <button type="button" class="btn btn-outline-light btn-lg">
+              Click for Booking
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="marriage.jpg" class="d-block w-100" alt="wedding" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Marriage Ceremony</h5>
+            <button type="button" class="btn btn-outline-light btn-lg">
+              Click for Booking
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="together.jpg" class="d-block w-100" alt="party" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Get Together Parties</h5>
+            <button type="button" class="btn btn-outline-light btn-lg">
+              Click for Booking
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-<!--Hero section page-->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="birthday.jpg" class="d-block w-100" alt="Birthday">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Birthday Party</h5>
-        <button type="button" class="btn btn-outline-light btn-lg">Click for Booking </button>
+    <br />
+
+    <!-- Services section -->
+    <div id="services">
+      <h3>Services</h3>
+      <div class="container service-container">
+        <div class="service-card">
+          <h4>Birthday Party Planning</h4>
+          <p>
+            Let us make your birthday celebration unforgettable! Our team
+            specializes in crafting personalized birthday parties tailored to
+            your preferences. From themed decorations to exciting activities, we
+            handle everything to ensure your special day is filled with joy and
+            cherished memories.
+          </p>
+        </div>
+        <div class="service-card">
+          <h4>Wedding Ceremony Organization</h4>
+          <p>
+            Entrust us with the intricate details of your wedding ceremony. Our
+            experienced team will meticulously plan and coordinate every aspect,
+            from venue selection to floral arrangements, ensuring a seamless and
+            magical event. Let us turn your dream wedding into a reality.
+          </p>
+        </div>
+        <div class="service-card">
+          <h4>Event Catering Services</h4>
+          <p>
+            Indulge in culinary delights with our premium event catering
+            services. From elegant hors d'oeuvres to exquisite main courses, our
+            expert chefs craft culinary creations that delight the palate and
+            elevate your event. Sit back, relax, and savor the flavors while we
+            take care of your catering needs.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="marriage.jpg" class="d-block w-100" alt="wedding">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Marriage Ceremony</h5>
-        <button type="button" class="btn btn-outline-light btn-lg">Click for Booking </button>
+
+    <!--comments page-->
+    <h3 style="text-align: center">Comments</h3>
+
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="fname">First Name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your first name.."
+          required
+        /><br /><br />
+
+        <label for="lname">Last Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+          required
+        /><br /><br />
+
+        <label for="event">Event:</label>
+        <select id="event" name="event" required>
+          <option value="birthday">Birthday</option>
+          <option value="wedding">Wedding Ceremony</option>
+          <option value="party">Party</option>
+        </select>
+        <br /><br />
+
+        <label for="feedback">Feedback:</label><br />
+        <textarea
+          id="feedback"
+          name="feedback"
+          placeholder="Write something about us.."
+          style="height: 200px"
+          required
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="contactModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Contact Us</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Contact Form -->
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="contactName" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactName"
+                  name="contactName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contactEmail"
+                  name="contactEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="contactMessage"
+                  name="contactMessage"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary" form="contactForm">
+              Send Message
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="together.jpg" class="d-block w-100" alt="party">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Get Together Parties</h5>
-        <button type="button" class="btn btn-outline-light btn-lg">Click for Booking </button>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the contact modal element
+        var contactModal = document.getElementById("contactModal");
 
-  <br>
+        // Get the close button inside the modal
+        var closeButton = contactModal.querySelector(".btn-close");
 
-  
-<!--comments page-->
-  <h3 style="text-align: center;">Commnets</h3>
+        // Function to close the modal
+        function closeModal() {
+          var modal = bootstrap.Modal.getInstance(contactModal);
+          modal.hide();
+        }
 
-  <div class="container">
-    <form action="/action_page.php">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
+        // Add event listener to the close button
+        closeButton.addEventListener("click", function () {
+          closeModal(); // Close modal without redirecting
+        });
 
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+        // Get the contact link element
+        var contactLink = document.getElementById("contactLink");
 
-      <label for="event">Event</label>
-      <select id="event" name="event">
-        <option value="birthday">Birthday</option>
-        <option value="wedding">Wedding Ceremony</option>
-        <option value="Party">Party</option>
-      </select>
-      <br><br>
-      <label for="feedback">feedback</label>
-      <textarea id="feedback" name="feedback" placeholder="Write something About us.." style="height:200px"></textarea>
-      <br><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+        // Add event listener to the contact link
+        contactLink.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          // Show the contact modal
+          var modal = new bootstrap.Modal(contactModal);
+          modal.show();
+        });
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-</body>
-
+        // Add event listener to handle modal dismissal when clicking outside the modal
+        contactModal.addEventListener("click", function (event) {
+          if (event.target === contactModal) {
+            closeModal(); // Close modal without redirecting
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
